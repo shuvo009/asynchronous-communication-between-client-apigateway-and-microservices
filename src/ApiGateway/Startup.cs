@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiGateway.Hubs;
 using ApiGateway.Implementations;
 using ApiGateway.Interface;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,7 @@ namespace ApiGateway
         {
             services.AddControllers();
             services.AddTransient<IServiceBusClient, ServiceBusClient>();
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,9 +47,14 @@ namespace ApiGateway
 
             app.UseAuthorization();
 
+            app.UseCors(options =>
+                options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<FileBrowserHub>("/fileBrowser");
+                endpoints.MapHub<CsvReaderHub>("/csvReader");
             });
         }
     }
