@@ -44,11 +44,12 @@ namespace ApiGateway
             app.UseHttpsRedirection();
 
             app.UseRouting();
+          
 
             app.UseAuthorization();
 
             app.UseCors(options =>
-                options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+                options.SetIsOriginAllowed(_ => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
             app.UseEndpoints(endpoints =>
             {

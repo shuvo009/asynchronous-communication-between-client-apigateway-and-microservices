@@ -1,1 +1,14 @@
-<p>http works!</p>
+<h5 style="text-align: center;"> HTTP CALL</h5>
+<tree-root [options]="options" [focused]="true" [nodes]="nodes"></tree-root>
+
+<div style="margin-top: 20px;">
+  <label>CSV file content</label>
+</div>
+<div>
+  <table>
+    <tr *ngFor="let r of csvFileContent">
+      <td *ngFor="let c of r">{{c}}</td>
+    </tr>
+  </table>
+</div>
+<hr />
