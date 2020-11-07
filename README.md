@@ -38,7 +38,7 @@ Step 4: Go to AngularClient
 ```
 npm install
 ```
-Step 5: Rull all together
+Step 5: Run all together
 
 ## How it works
 
@@ -49,7 +49,23 @@ Step 2: Create a temporary queue at azure service bus.
 
 Step 3: Set temporary queue at ReplyTo of Message.
 
-Step 4: Send this message to a predefine queue.
+Step 4: Send that message to a predefine queue.
 
 Step 5: Start listening at temporary queue.
 
+Step 6: Microservice recive that message and process that and send back to that temporary queue.
+
+Step 7: ApiGateway recive that message over temporary queue and delete temporary queue.
+
+Step 8: ApiGateway send back that message to client.
+
+### Client to ApiGateway over socket
+Step 1: Create a temporary channel for receiving message.
+
+Step 2: Send message to server with temporary channel.
+
+Step 3: listening at temporary channel
+
+Step 4: Receive message from temporary channel and delete temporary channel.
+
+Step 5: Display Data at UI
