@@ -44,8 +44,12 @@ Step 5: Rull all together
 
 ### ApiGateway to Miceroservice
 Step 1: Request receive from client
+
 Step 2: Create a temporary queue at azure service bus.
+
 Step 3: Set temporary queue at ReplyTo of Message.
+
 Step 4: Send this message to a predefine queue.
+
 Step 5: Start listening at temporary queue.
 
