@@ -12,3 +12,7 @@ Microservices are comminicating with ApiGateway over message bus but client appl
 * Angular 10 (Client Application)
 * SignalR (Web Socket. Client to ApiGateway communication) 
 * HTTP (GET, POST. Client to ApiGateway communication)
+
+## Azure Services
+* Service Bus (STANDARD)
+* App Service
