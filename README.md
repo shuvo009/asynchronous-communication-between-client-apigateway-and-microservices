@@ -13,6 +13,9 @@ Microservices are comminicating with ApiGateway over message bus but client appl
 * SignalR (Web Socket. Client to ApiGateway communication) 
 * HTTP (GET, POST. Client to ApiGateway communication)
 
+## Patterns
+* Request And Reply Pattern
+
 ## Azure Services
 * Service Bus (STANDARD)
 * App Service
@@ -69,3 +72,5 @@ Step 3: listening at temporary channel
 Step 4: Receive message from temporary channel and delete temporary channel.
 
 Step 5: Display Data at UI
+
+Enjoy!! :blush:
