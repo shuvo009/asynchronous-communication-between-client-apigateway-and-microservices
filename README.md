@@ -16,3 +16,26 @@ Microservices are comminicating with ApiGateway over message bus but client appl
 ## Azure Services
 * Service Bus (STANDARD)
 * App Service
+
+## Common setup
+Step 1: Clone the repo
+```
+git clone https://github.com/shuvo009/microservices-asynchronous-communication.git
+
+```
+Step 2: Set you Azure Service bus connection string at 
+```
+ApiGateway/appsettings.json
+MicroserviceOne/appsettings.json
+MicroserviceTwo/appsettings.json
+```
+Step 3: Please make sure following Queues are exist at Azure service bus
+```
+FileBrowser
+ReadCsvFile
+```
+Step 4: Go to AngularClient
+```
+npm install
+```
+Step 5: Rull all together
