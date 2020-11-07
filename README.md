@@ -6,3 +6,9 @@ Microservices are comminicating with ApiGateway over message bus but client appl
 
 ![diagram](https://github.com/shuvo009/microservices-asynchronous-communication/blob/main/diagram%20.png)
 
+## Technologies
+* Asp.net Core 3.1 (ApiGateway)
+* .NET Core Web Job (Microservice)
+* Angular 10 (Client Application)
+* SignalR (Web Socket. Client to ApiGateway communication) 
+* HTTP (GET, POST. Client to ApiGateway communication)
